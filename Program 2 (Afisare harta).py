@@ -35,24 +35,12 @@ for file1 in folder_files1:
     for file2 in folder_files2:
         # Comparăm numele fișierelor
         if file1[4:] == file2[4:]:
-            """
-            # Facem append de noi informații în fișierul găsit
-            file1_path = os.path.join(folder_path, file1)
-
-            # print("exista")
-            # Deschidem fișierul din primul folder în modul append
-            with open(file1_path, "a") as file1_handle:
-            """
             # Citește conținutul fișierului din al doilea folder
             file2_path = os.path.join(folder_path2, file2)
 
             with open(file2_path, "r") as file2_handle:
                 data2 = json.load(file2_handle)
                 # file2_content = file2_handle.read()
-                """
-                # Adaugăm noi informații în fișierul din primul folder
-                file1_handle.write(file2_content)
-                """
                 for item2 in data2:
                     coord.append(
                         [item2['subType'], item2['name'], item2['geoCode']['latitude'], item2['geoCode']['longitude'],
